@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/sanjay1112ms-gif/website-project.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'sudo docker build -t website:v1 .'
